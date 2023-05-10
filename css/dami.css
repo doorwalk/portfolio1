@@ -1,0 +1,560 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto&display=swap');
+
+* { margin : 0; padding : 0; }
+li { list-style-type : none; }
+a { text-decoration: none;}
+body {  }
+
+/* 웹브라우저 창 너비 알려주는 요소 */
+#web_width { position : fixed; top : 20px; right : 10px; 
+            width : 130px; height : 30px; background : rgba(0,0,0,0.5); 
+            z-index: 101; color : #eee; text-align: center;
+            line-height: 30px; border-radius: 10px;
+            text-shadow: 0 0 10px blue; display : block;}
+
+#scrollView { position : fixed; top : 60px; right : 10px; 
+        width : 130px; height : 30px; background : rgba(0,0,0,0.5); 
+        z-index: 101; color : #eee; text-align: center;
+        line-height: 30px; border-radius: 10px;
+        text-shadow: 0 0 10px blue; display : block; }
+
+/* dot_box" */
+#dot_box { width : 30px; height : 120px;
+        position : fixed; right : 20px; top : 50%; z-index : 200; 
+        display : flex; flex-direction: column; justify-content: space-around;
+        align-items: center;}
+.dot { width : 13px; height : 13px; border-radius : 50%; 
+        background : rgba(0,0,0,0.5); border : 1px solid #fff;
+        cursor : pointer; position : relative; }
+.dot span { position : absolute; width : 70px; left : -75px; 
+        top : -5px; text-align : right; color : #000; font-weight : bold;
+        display : none; }
+
+/* wrapper */
+#wrapper { width : 100%; }
+/* header */
+header { width : 100%; height : 55px; position : fixed; left : 0; top : 0; 
+         background : linear-gradient(#fff, #fde4e4); 
+        z-index : 100; }
+/* header #logo */
+#logo { position : absolute; right : 80%; }
+/* header gnb (메인메뉴) */
+/* #gnb { position : absolute; display : flex; justify-content: space-evenly; 
+    text-align : center; top : 23px; right : 30%; }
+.gnb_li { width : 100px; } */
+#gnb { position : absolute; text-align : center; top : 23px; right : 30%; }
+.gnb_li { float : left; width : 100px; }
+.gnb_li > a { display : block; padding : 5px 15px; color : #333;
+            border-radius: 15px; font-weight : bold; }
+.gnb_li > a:hover { background : linear-gradient(pink, #fff, pink); }
+/* #gnb:hover .sub_gnb { display : block; } */
+/* header gnb 하위 메뉴 */
+.sub_gnb { display : none; }
+.sub_gnb li { background : rgba(255, 255, 255, 0.7); }
+.sub_gnb li a { display : block; padding : 10px 0; color : rgb(255, 103, 1);
+                border-radius : 15px; }
+.sub_gnb li a:hover { background : rgba(255, 232, 232, 0.5); }
+.gnb_logo { display : none; margin : 20px 0 50px 0;  } /* 모바일화면 gnb 로고 */
+
+/* 모바일화면 SNS */
+.sns_gnb { width : 110px; position : absolute; left : 50%; top : 75px;
+        margin-left : -55px; display : none; }
+.sns_gnb li { width : 30px; float : left; margin-left : 5px; }
+.sns_gnb li img { width : 30px; height : 30px; 
+                transition : all 0.5s; }
+.sns_gnb li img:hover { transform : translateY(-7px); }
+
+/* header SNS */
+#sns_header { position : absolute; left : 83%; top : 20px;
+            display : flex; }
+#sns_header li { width : 40px; }
+#sns_header li img { width : 30px; height : 30px; 
+                    transition : all 0.5s; }
+#sns_header li img:hover { transform : translateY(-7px); }
+
+/* container */
+#container {  }
+/* banner */
+#banner { width : 100%; height : 700px; position : relative;
+        background : url("../images/welcome_1116.png") no-repeat fixed center/cover;}
+#banner_txt { position : absolute;  top : 200px; left : 200px; transition : all 0.3s;}
+.welcome { font : bold 150px 'Great Vibes', cursive; color : #fff; 
+            text-shadow: 0 0 5px orange; }
+.banner_txt { font-size : 26px; }
+            
+/* content2 */
+#content2 { width : 944px; position : relative; left : 50%; 
+                margin-left : -472px; top : -130px; }
+.content2_ul { width : 100%; height : 470px;
+            display : grid; grid-template-columns: repeat(4, 1fr); }
+.c2_li { width : 236px; height: 235px; text-align : center; 
+        padding-top : 80px; box-sizing: border-box;
+        font-size : 24px; position : relative; }
+.c2_1 { background : #fcd2c0; }
+.c2_2 { background : url("../images/s2-1.png");}
+.c2_3 { background : #000; color : #fff; }
+.c2_4 { background : url("../images/s2-2.png");}
+.c2_5 { background : url("../images/s2-3.png");}
+.c2_6 { background : #fffbe8; }
+.c2_7 { background : url("../images/s2-4.png");}
+.c2_8 { background : orange; }
+.c2_li span { position : absolute; width : 30px; top : 70px;
+            left : 50%; margin-left : -15px;
+            background : #000; height : 3px; }
+.c2_3 span { background : #fff; }
+.c2_li a { color : #000; font-size : 16px; 
+            position : absolute; bottom : 50px;
+            left : 50%; margin-left : -50px;
+            width : 100px; transition : all 0.3s;}
+.c2_3 a { color : #fff; }
+.c2_li a:hover { text-shadow : 2px 2px 2px orange; 
+            transform : translateX(10px); }
+
+
+
+/* content3 */
+#content3 { width : 100%; height : 730px; 
+        background : url("../images/s3_bg.png") no-repeat fixed center/cover; 
+        position : relative; top : -50px; }  
+.c3_black { width : 600px; height : 600px; background : #000;
+        position : absolute; top : 50%; left : 50%;
+        margin : -300px 0 0 -300px; }
+.c3_stick { position : absolute; width : 40px; top : 70px;
+         left : 50%; margin-left : -15px;
+         background : #fff; height : 3px; }
+.specials { font-size : 60px; color : #fff; 
+        margin : 80px 0 0 90px; }
+.spec_menu { width : 400px; height : 250px;
+        margin-left : 95px; padding-top : 50px; } 
+.spec_menu li { color : #fff; font-size : 17px; line-height: 2.5em;
+                position : relative; }
+.price { position : absolute; right : 0px;}
+.reserve { position : absolute; bottom : 90px; left : 260px; 
+        color : #fff;  transition : all 0.3s;}
+.reserve:hover { color : pink;  transform : translateX(10px); }
+
+
+/* content4 */
+#content4 { width : 100%; height : 580px;
+        position : relative; top : 0px; }  
+.c4_stick { position : absolute; width : 40px; top : 70px;
+        left : 50%; margin-left : -15px;
+        background : #000; height : 3px; }
+.review { font-size : 60px; position : absolute; left : 50%; top : 80px;
+        margin-left : -130px; font-style : italic; }
+.review_list { display : flex; justify-content: space-around;
+                width : 900px; position : absolute; left : 50%; top : 200px; 
+                margin-left : -450px; }     
+.review_list li { text-align : center; line-height : 1.6em; font-size : 17px; 
+                height : 250px; position : relative; }     
+.quote { margin-bottom : 10px; }
+.customer { width : 100%; position : absolute; bottom : 0px; font-weight : bold; }
+
+
+/* content5 */
+#content5 { width : 100%; height : 730px; 
+        background : url("../images/s5_bg.png") no-repeat fixed center/cover; 
+        position : relative; overflow : hidden; }
+.c5_movebg { width : 1066px; height : 759px; position : absolute; 
+        animation : bgmove 10s infinite; }
+.mbg2 { right : 0px; animation : bgmove 10s 2s infinite; }
+.mbg3 { left : 300px; animation : bgmove 10s 4s infinite; }
+
+@keyframes bgmove {
+        0% { transform : translateY(700px); }
+        100% { transform : translateY(-700px); }
+}
+        
+.c5_black { width : 600px; height : 600px; background : #000;
+        position : absolute; top : 50%; left : 50%;
+        margin : -300px 0 0 -300px; }
+.c5_stick { position : absolute; width : 40px; top : 50px;
+                left : 50%; margin-left : -15px;
+                background : #fff; height : 3px; }
+.c5_black p, .reserveBox, .map_view { color : #fff; position : absolute; }
+.location { font-size : 40px; top : 70px; left : 50%; margin-left : -80px; }
+.info { font-size : 17px; line-height: 1.6em; text-align : center; 
+        top : 150px; left : 145px; }
+.service_time { font-size : 17px; line-height: 1.6em; text-align : center;
+                top : 240px; left : 38px; }
+.reserveBox { width : 470px; left : 60px; bottom : 140px;
+                border : 1px solid #fff; }
+.inputBox { width : 225px; height : 100%; float : left; }
+.inputBox input { display : block; width : 96%; height : 33px;
+                padding-left : 10px; outline: none;}
+.message { width : 240px; height : 111px; float : right; 
+        padding : 8px 0 0 8px; box-sizing: border-box; outline: none;
+        resize : none; line-height : 1.4em; }
+.submit_btn { position : absolute; bottom : -40px; right : 0px; 
+        background : #000; color : #fff; border-radius: 20px;
+        padding : 5px 10px; border : 1px solid #ccc; cursor : pointer;}
+.submit_btn:hover { color : pink; border : 1px solid pink; }
+.map_view { bottom : 70px; left : 250px; transition : all 0.3s; }
+.map_view:hover { color : pink; transform : translateX(10px); }
+
+/* footer */
+footer { width : 100%; height : 250px; background : #111; position : relative; }
+#footer_content_box { width : 60%; left : 20%; top : 30px; position : absolute; }
+#footer_menu { width : 550px; display : flex; justify-content: space-around; }
+#footer_menu li { color : #fff; }
+#footer_menu li a { color : #fff; }
+#footer_menu li a:hover { color : pink; }
+#footer_content { position : absolute; left : 0px; top : 70px; line-height: 2em;}
+#footer_content p, #footer_content small { color : #fff; }
+
+#sns_footer { width : 150px; position : absolute; right : 0px; 
+                display : flex; justify-content: space-around; }
+#sns_footer img { width : 40px; height : 40px; 
+                transition : all 0.5s; }
+#sns_footer li img:hover { transform : translateY(-7px); }
+
+
+
+/* 햄버거 메뉴 아이콘 */
+.hamburger {
+	/*padding: 15px 15px;*/
+	display: none;
+	cursor: pointer;
+	transition-property: opacity, filter;
+	transition-duration: 0.15s;
+	transition-timing-function: linear;
+	font-size:inherit;
+	color: inherit;
+	text-transform: none;
+	background-color: transparent;
+	border: 0;
+	margin: 0;
+	overflow: visible; 
+	position : absolute;
+	top : 15px;
+	right : 15px;
+        z-index: 101;
+}
+
+.hamburger:hover { opacity: 0.7; }
+  
+  .hamburger-box {
+	width: 30px;
+	height: 20px;
+	display: inline-block;
+	position: relative; }
+  
+  .hamburger-inner {
+	display: block;
+	top: 50%;
+	margin-top: -2px; }
+	.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+	  width: 30px;
+	  height: 4px;
+	  background-color: #000;
+	  border-radius: 4px;
+	  position: absolute;
+	  transition-property: transform;
+	  transition-duration: 0.15s;
+	  transition-timing-function: ease; }
+	.hamburger-inner::before, .hamburger-inner::after {
+	  content: "";
+	  display: block; }
+	.hamburger-inner::before {
+	  top: -10px; }
+	.hamburger-inner::after {
+	  bottom: -10px; }
+  
+  
+  /*
+	 * Spin
+	 */
+  .hamburger--spin .hamburger-inner {
+	transition-duration: 0.3s;
+	transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+	.hamburger--spin .hamburger-inner::before {
+	  transition: top 0.1s 0.34s ease-in, opacity 0.1s ease-in; }
+	.hamburger--spin .hamburger-inner::after {
+	  transition: bottom 0.1s 0.34s ease-in, transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+  
+  .hamburger--spin.is-active .hamburger-inner {
+	transform: rotate(225deg);
+	transition-delay: 0.14s;
+	transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+	.hamburger--spin.is-active .hamburger-inner::before {
+	  top: 0;
+	  opacity: 0;
+	  transition: top 0.1s ease-out, opacity 0.1s 0.14s ease-out; }
+	.hamburger--spin.is-active .hamburger-inner::after {
+	  bottom: 0;
+	  transform: rotate(-90deg);
+	  transition: bottom 0.1s ease-out, transform 0.3s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1); }
+
+
+@media screen and (max-width : 500px) {  /* 화면 너비 : 1px ~ 500px (스마트폰용) */
+
+        html, body { overflow-x: hidden;}
+        
+        /* dot_box */
+        .dot span { color : orange; }
+
+        /* header #logo */
+        #logo { left : 10px; } 
+
+        /* header gnb (메인메뉴) */
+        #gnb { width : 100%; height : 100%; position : fixed; 
+                right : 0px; top : 0px; display : none;
+                background : linear-gradient(#fff, #fde4e4);
+                overflow-y : auto; }
+        .gnb_li { width : 100%; }
+        .gnb_li > a { border-bottom : 1px solid pink; }
+        .gnb_logo { display : block; }
+        .hamburger { display : block; }
+        #sns_header { display : none; }
+        .sns_gnb { display : block; }
+        
+
+        /* banner */
+        #banner { width : 100%; height : 300px; position : relative; top : 50px;
+                background : url("../images/welcome_1116.png") no-repeat scroll center/cover;}
+        #banner_txt { position : absolute;  top : 80px; left : 20px; }
+        .welcome { font : bold 50px 'Great Vibes', cursive; color : #fff; 
+                    text-shadow: 0 0 5px orange; }
+        .banner_txt { font-size : 16px; width : 200px; }
+
+        /* content2 */
+        #content2 {width : 100%; position : relative; 
+                left : 0; right : 0; top : 0; bottom : 0; 
+                margin : auto; top : 60px;}
+        .c2_2, .c2_4, .c2_5, .c2_7 { display : none; }
+        .content2_ul { grid-template-columns: repeat(2, 1fr); 
+        height : 380px; width : 100%;}
+        .c2_li { width : 100%; height : 100%; 
+                padding-top : 50px; }
+        .c2_li span { top : 40px; }
+
+
+        /* content3 */
+        #content3 { height : 500px; top : 70px;}
+
+        .c3_black { width : 80%; height : 450px; background : #000;
+                position : absolute; top : 0; left : 0; bottom : 0; right : 0;
+                margin : auto; }
+        .c3_stick { position : absolute; width : 40px; top : 30px;
+                 left : 50%; margin-left : -15px;
+                 background : #fff; height : 3px; }
+        .specials { font-size : 30px; color : #fff; 
+                position : relative; left : 50%; top : 0px;
+                margin : 40px 0 0 -105px; }
+        .spec_menu { width : 80%; height : 250px;
+                margin-left : 30px; padding-top : 40px; } 
+        .spec_menu li { color : #fff; font-size : 16px; line-height: 2.5em;
+                        position : relative; }
+        .price { position : absolute; right : 0px;}
+        .reserve { position : absolute; bottom : 60px; left : 50%;
+                margin-left : -40px; 
+                color : #fff;  transition : all 0.3s;}
+
+
+        /* content4 */
+        #content4 { width : 100%; height : 460px;
+                position : relative; top : 40px; }  
+        .c4_stick { position : absolute; width : 40px; top : 70px;
+                left : 50%; margin-left : -15px;
+                background : #000; height : 3px; }
+        .review { font-size : 36px; position : absolute; left : 50%; top : 80px;
+                margin-left : -80px; font-style : italic; }
+        .review_list { display : flex; justify-content: space-around;
+                        width : 100%; left : 450px; top : 160px; }     
+        .review_list li { text-align : center; line-height : 1.6em; font-size : 12px; 
+                        height : 250px; position : relative; 
+                        letter-spacing : -0.1rem; }     
+        .quote { margin-bottom : 10px; }
+        .customer { width : 100%; position : absolute; bottom : 60px; font-weight : bold; }
+
+
+
+        /* content5 */
+        #content5 { width : 100%; height : 500px; 
+                background : url("../images/s5_bg.png") no-repeat fixed center/cover; 
+                position : relative; overflow : hidden; }
+        .c5_movebg { width : 100%; height : 500px; position : absolute; 
+                animation : bgmove 10s infinite; }
+                
+        .c5_black { width : 80%; height : 450px; background : #000;
+                position : absolute; top : 0; left : 0; bottom : 0; 
+                right : 0; margin : auto; }
+        .c5_stick { position : absolute; width : 40px; top : 30px;
+                        left : 50%; margin-left : -15px;
+                        background : #fff; height : 3px; }
+        .c5_black p, .reserveBox, .map_view { color : #fff; position : absolute; }
+        .location { font-size : 30px; top : 45px; left : 50%; margin-left : -60px; }
+        .info { font-size : 14px; line-height: 1.6em; text-align : center; 
+                top : 100px; left : 50%; margin-left : -125px; }
+        .service_time { font-size : 14px; line-height: 1.6em; text-align : center;
+                        top : 160px; left : 50%; width : 300px; margin-left : -150px; }
+        .reserveBox { width : 80%; left : 50%; bottom : 70px;
+                        margin-left : -40%;
+                        border : 1px solid #fff; }
+        .inputBox { width : 50%; height : 100%; float : left; }
+        .inputBox input { display : block; width : 96%; height : 33px;
+                        padding-left : 10px; outline: none;}
+        .message { width : 50%; height : 111px; float : right; 
+                padding : 8px 0 0 8px; box-sizing: border-box; outline: none;
+                resize : none; line-height : 1.4em; }
+        .submit_btn { position : absolute; bottom : -40px; right : 0px; 
+                background : #000; color : #fff; border-radius: 20px;
+                padding : 3px 8px; border : 1px solid #ccc; cursor : pointer;}
+        .submit_btn:hover { color : pink; border : 1px solid pink; }
+        .map_view { bottom : 10px; left : 50%; transition : all 0.3s; 
+                font-size : 14px; margin-left : -45px; }
+        .map_view:hover { color : pink; transform : translateX(10px); }
+
+
+        /* footer */
+        footer { width : 100%; height : 250px; background : #111; position : relative; }
+        #footer_content_box { width : 100%; left : 0px; top : 30px; position : absolute; }
+        #footer_menu { width : 100%; display : flex; justify-content: space-around; }
+        #footer_menu li { color : #fff; }
+        #footer_menu li a { color : #fff; font-size : 13.5px; }
+        #footer_menu li a:hover { color : pink; }
+        #footer_content { position : absolute; left : 10px; top : 70px; 
+                        line-height: 2em; width : 100%; font-size : 14px; }
+        #footer_content p, #footer_content small { color : #fff; }
+
+        #sns_footer { width : 120px; position : absolute; right : 10px;
+                        top : 50px; 
+                        display : flex; justify-content: space-around; }
+        #sns_footer img { width : 30px; height : 30px; 
+                        transition : all 0.5s; }
+}
+
+
+@media screen and (min-width : 501px) and (max-width : 768px) {  /* 화면 너비 : 501px ~ 768px (태플릿용) */
+
+        html, body { overflow-x: hidden;}
+        
+        /* dot_box */
+        .dot span { position : absolute; width : 70px; left : -75px; 
+                top : -5px; text-align : right; color : orange; font-weight : bold;
+                display : none; }
+        
+        /* header #logo */
+        #logo { left : 10px; }
+
+        /* header gnb (메인메뉴) */
+        #gnb { width : 100%; height : 100%; position : fixed; 
+                right : 0px; top : 0px; display : none;
+                background : linear-gradient(#fff, #fde4e4); 
+                overflow-y : auto; }
+        .gnb_li { width : 100%; }
+        .gnb_li > a { border-bottom : 1px solid pink; }
+        .gnb_logo { display : block; }
+        .hamburger { display : block; }
+        #sns_header { display : none; }
+        .sns_gnb { display : block; }
+
+
+        /* banner */
+        #banner { width : 100%; height : 600px; position : relative; top : 50px;
+                background : url("../images/welcome_1116.png") no-repeat scroll center/cover;}
+        #banner_txt { position : absolute;  top : 80px; left : 20px; }
+        .welcome { font : bold 80px 'Great Vibes', cursive; color : #fff; 
+                    text-shadow: 0 0 5px orange; }
+        .banner_txt { font-size : 16px; width : 220px; }
+        
+        /* content2 */
+        #content2 {width : 472px; height : 1050px; position : relative; left : 50%; 
+                margin-left : -236px; top : 0px;}
+        .content2_ul { grid-template-columns: repeat(2, 1fr); }
+
+
+        /* content3 */
+        #content3 { top : -110px; height : 600px; }
+
+        .c3_black { width : 80%; height : 550px; background : #000;
+                position : absolute; top : 0; left : 0; bottom : 0; 
+                right : 0; margin : auto; }
+        .c3_stick { position : absolute; width : 40px; top : 70px;
+                 left : 50%; margin-left : -15px;
+                 background : #fff; height : 3px; }
+        .specials { font-size : 50px; color : #fff; 
+                position : relative; left : 50%; margin-left : -170px; }
+        .spec_menu { width : 80%; height : 250px;
+                margin-left : 10%; padding-top : 50px; } 
+        .spec_menu li { color : #fff; font-size : 17px; line-height: 2.5em;
+                        position : relative; }
+        .price { position : absolute; right : 0px;}
+        .reserve { position : absolute; bottom : 90px; left : 50%;
+                margin-left : -40px; 
+                color : #fff;  transition : all 0.3s;}
+
+
+        /* content4 */
+        #content4 { width : 100%; height : 370px;
+                position : relative; top : -100px; }  
+        .c4_stick { position : absolute; width : 40px; top : 70px;
+                left : 50%; margin-left : -15px;
+                background : #000; height : 3px; }
+        .review { font-size : 40px; position : absolute; left : 50%; top : 80px;
+                margin-left : -85px; font-style : italic; }
+        .review_list { display : flex; justify-content: space-around;
+                        width : 100%; position : absolute; left : 0;
+                        top : 0; right : 0; bottom : 0; margin : 170px auto; } 
+        .review_list li { text-align : center; line-height : 1.6em; font-size : 12px; 
+                        height : 250px; position : relative; }     
+        .quote { margin-bottom : 10px; }
+        .customer { width : 100%; position : absolute; bottom : 60px; font-weight : bold; }      
+
+        /* content5 */
+        .service_time { font-size : 15px; line-height: 1.6em; text-align : center;
+                width : 100%; left : 50%; margin-left : -305px;}
+        
+
+        /* footer */
+        footer { width : 100%; height : 250px; background : #111; position : relative; }
+        #footer_content_box { width : 100%; left : 0px; top : 30px; position : absolute; }
+        #footer_menu { width : 100%; display : flex; justify-content: space-around; }
+        #footer_menu li { color : #fff; }
+        #footer_menu li a { color : #fff; }
+        #footer_menu li a:hover { color : pink; }
+        #footer_content { position : absolute; left : 5%; top : 70px; 
+                        line-height: 2em; width : 95%;}
+        #footer_content p, #footer_content small { color : #fff; }
+
+        #sns_footer { width : 120px; position : absolute; right : 10px;
+                        top : 50px; 
+                        display : flex; justify-content: space-around; }
+        #sns_footer img { width : 30px; height : 30px; 
+                        transition : all 0.5s; }
+}
+
+@media screen and (min-width:769px) and (max-width : 1200px) {  /* 화면 너비 : 769px ~ 1200px (PC용) */
+        
+        html, body { overflow-x: hidden;}
+        
+        /* header */
+        #logo { left : 0px; top : 10px; }
+        #logo img { width : 160px; }
+        #gnb { right : 15%; }
+        #sns_header { left : 85%;}
+        #sns_header li { width : 30px; }
+        #sns_header li img { width : 25px; height : 25px; }
+
+        
+        /* banner */
+        #banner_txt { position : absolute;  top : 180px; left : 20px; }
+        .welcome { font : bold 110px 'Great Vibes', cursive; color : #fff; 
+                    text-shadow: 0 0 5px orange; }
+        .banner_txt { font-size : 16px; }
+
+
+        /* footer */
+        #footer_content_box { left : 0px; top : 0; right : 0; bottom : 0; 
+                        margin : 30px 10%; width : 70%; }
+        #sns_footer { width : 135px; position : absolute; right : 0px; 
+                top : 50px;
+                display : flex; justify-content: space-around; }
+        #sns_footer img { width : 35px; height : 35px; }
+}
+
+@media screen and (min-width:1201px) {  /* 화면 너비 : 1201px이상 (PC용) */
+
+}
+

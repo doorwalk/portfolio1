@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Beauty Dami</title>
+        <link rel="shortcut icon" href="images/favicon2.png">
+        <link rel="stylesheet" type="text/css" href="css/dami.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+        <script src="js/dami.js"></script>
+        <style type="text/css">
+        </style>
+    </head>
+    <body>
+        <!--<div id="web_width"></div>    웹브라우저 너비 표시(참고용) -->
+        <!--<div id="scrollView"></div>   스크롤값 보기 -->
+        <ul id="dot_box"> <!-- 클릭시 각 메뉴의 위치로 스크롤 이동 -->
+            <li class="dot"><span>뷰티다미</span></li>
+            <li class="dot"><span>서비스</span></li>
+            <li class="dot"><span>스페셜</span></li>
+            <li class="dot"><span>고객 리뷰</span></li>
+            <li class="dot"><span>예약</span></li>
+        </ul>
+        <div id="wrapper"> <!-- wrapper 시작 -->
+            <header> <!-- header 시작 -->
+                <h1 id="logo"><a href="index.html"><img src="images/logo.png" alt="logo" /></a></h1>
+                <div class="hamburger hamburger--spin"> <!-- 태블릿, 모바일 화면시 나타나는 메인메뉴 버튼 -->
+                    <div class="hamburger-box">
+                      <div class="hamburger-inner"></div>
+                    </div>
+                </div>
+                <nav> <!-- 메인메뉴 gnb 시작 -->
+                    <ul id="gnb">
+                        <h2 class="gnb_logo"><img src="images/logo.png" alt="logo" /></h2>
+                        <ul class="sns_gnb"> <!-- 모바일 화면용 SNS 시작-->
+                            <li><a href="#"><img src="images/SNS_icon/facebook_o.png" /></a></li>
+                            <li><a href="#"><img src="images/SNS_icon/instargram_o.png" /></a></li>
+                            <li><a href="#"><img src="images/SNS_icon/twitter_o.png" /></a></li>
+                        </ul> <!-- 모바일 화면용 SNS 끝-->
+                        <li class="gnb_li"><a href="#">뷰티다미</a>
+                            <ul class="sub_gnb">
+                                <li><a href="#">sub_menu1</a></li>
+                                <li><a href="#">sub_menu2</a></li>
+                                <li><a href="#">sub_menu3</a></li>
+                                <li><a href="#">sub_menu4</a></li>
+                            </ul>
+                        </li>
+                        <li class="gnb_li"><a href="#">서비스</a>
+                            <ul class="sub_gnb">
+                                <li><a href="#">sub_menu1</a></li>
+                                <li><a href="#">sub_menu2</a></li>
+                                <li><a href="#">sub_menu3</a></li>
+                                <li><a href="#">sub_menu4</a></li>
+                            </ul>
+                        </li>
+                        <li class="gnb_li"><a href="#">스페셜</a>
+                            <ul class="sub_gnb">
+                                <li><a href="#">sub_menu1</a></li>
+                                <li><a href="#">sub_menu2</a></li>
+                                <li><a href="#">sub_menu3</a></li>
+                                <li><a href="#">sub_menu4</a></li>
+                            </ul>
+                        </li>
+                        <li class="gnb_li"><a href="#">예약</a>
+                            <ul class="sub_gnb">
+                                <li><a href="#">sub_menu1</a></li>
+                                <li><a href="#">sub_menu2</a></li>
+                                <li><a href="#">sub_menu3</a></li>
+                                <li><a href="#">sub_menu4</a></li>
+                            </ul>
+                        </li>
+                        <li class="gnb_li"><a href="#">문의</a>
+                            <ul class="sub_gnb">
+                                <li><a href="#">sub_menu1</a></li>
+                                <li><a href="#">sub_menu2</a></li>
+                                <li><a href="#">sub_menu3</a></li>
+                                <li><a href="#">sub_menu4</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav> <!-- 메인메뉴 gnb 끝-->
+                <nav> <!-- SNS 시작-->
+                    <ul id="sns_header">
+                        <li><a href="#"><img src="images/SNS_icon/facebook_o.png" /></a></li>
+                        <li><a href="#"><img src="images/SNS_icon/instargram_o.png" /></a></li>
+                        <li><a href="#"><img src="images/SNS_icon/twitter_o.png" /></a></li>
+                    </ul>
+                </nav> <!-- SNS 끝-->
+            </header> <!-- header 끝 -->
+            
+            <div id="container"> <!-- container 시작 -->
+                <section id="banner"> <!-- section 1 시작 -->
+                    <div id="banner_txt">
+                        <h2 class="welcome">Welcome</h2>
+                        <p class="banner_txt">착한 미용 서비스! 뷰티다미에 오신걸 환영합니다.</p>
+                    </div>
+                </section> <!-- section 1 끝 -->
+
+                <section id="content2"> <!-- section 2 시작 -->
+                    <ul class="content2_ul">
+                        <li class="c2_li c2_1"><span></span>FACIALS<a href="#">예약하기 &#10148;</a></li>
+                        <li class="c2_li c2_2"></li>
+                        <li class="c2_li c2_3"><span></span>MAKE UP<a href="#">예약하기 &#10148;</a></li>
+                        <li class="c2_li c2_4"></li>
+                        <li class="c2_li c2_5"></li>
+                        <li class="c2_li c2_6"><span></span>HAIR STYLING<a href="#">예약하기 &#10148;</a></li>
+                        <li class="c2_li c2_7"></li>
+                        <li class="c2_li c2_8"><span></span>NAILS<a href="#">예약하기 &#10148;</a></li>
+                    </ul>
+                </section> <!-- section 2 끝 -->
+
+                <section id="content3"> <!-- section 3 시작 -->
+                    <div class="c3_black">
+                        <span class="c3_stick stick"></span>
+                        <p class="specials">Specials 스페셜</p>
+                        <ul class="spec_menu">
+                            <li>네일아트 <span class="price">25,000원</span></li>
+                            <li>헤어스타일링 <span class="price">70,000원</span></li>
+                            <li>일반 커트 <span class="price">15,000원</span></li>
+                            <li>매니큐어 손질 <span class="price">35,000원</span></li>
+                            <li>피부마사지 <span class="price">70,000원</span></li>
+                        </ul>
+                        <a href="#" class="reserve">예약하기 &#10148;</a>
+                    </div>
+                </section> <!-- section 3 끝 -->
+
+                <section id="content4"> <!-- section 4 시작 -->
+                    <span class="c4_stick stick"></span>
+                    <p class="review">고객 리뷰</p>
+                    <ul class="review_list">
+                        <li>
+                            <img class="quote" src="images/쌍따옴표.PNG" alt="" />
+                            <p>
+                                매번 원장쌤께<br />헤어 스타일링 받고 있는데,<br />
+                                항상 100프로 만족합니다.<br />왜 많은 분들이 원장님께<br />
+                                스타일링 받는지<br />알 것 같아요!
+                            </p>
+                            <p class="customer">- 김OO 매거진 에디터 -</p>
+                        </li>
+                        <li>
+                            <img class="quote" src="images/쌍따옴표.PNG" alt="" />
+                            <p>
+                                오늘도 최OO선생님께<br />네일 케어 받았는데<br />
+                                너무 너무 깔끔하고,<br />이쁘게 잘됐어요!<br />
+                                항상 감사합니다~!
+                            </p>
+                            <p class="customer">- 송OO 모델 -</p>
+                        </li>
+                        <li>
+                            <img class="quote" src="images/쌍따옴표.PNG" alt="" />
+                            <p>
+                                여기만큼 피부마사지<br />잘하는 집 못 찾았습니다!<br />
+                                마사지를 받고 나면<br />피부가 아기처럼<br />
+                                다시 보들보들 해져요^^
+                            </p>
+                            <p class="customer">- 전OO 사진작가 -</p>
+                        </li>
+                    </ul>
+                </section> <!-- section 4 끝 -->
+
+                <section id="content5"> <!-- section 5 시작 -->
+                    <img class="c5_movebg mbg1" src="images/s5_movebg.png" alt="" />
+                    <img class="c5_movebg mbg2" src="images/s5_movebg.png" alt="" />
+                    <img class="c5_movebg mbg3" src="images/s5_movebg.png" alt="" />
+                    <div class="c5_black">
+                        <span class="c5_stick stick"></span>
+                        <p class="location">오시는 길</p>
+                        <p class="info">
+                            경기 수원시 팔달구 매산로1가 111-21<br />
+                            beautydami@naver.com / 031-252-1234
+                        </p>
+                        <p class="service_time">
+                            서비스시간<br />
+                            주중 : 7am ~ 10pm / 토요일 : 8am ~ 10pm / 일요일 : 8am ~ 11pm
+                        </p>
+                        <form name="reserveBox" class="reserveBox" action="#" method="get">
+                            <div class="inputBox">
+                                <input type="text" name="customer_name" class="customer_info ci1" placeholder="이름" required />
+                                <input type="email" name="customer_email" class="customer_info ci2" placeholder="이메일" />
+                                <input type="tel" name="customer_tel" class="customer_info ci3" placeholder="전화번호" required />
+                            </div>
+                            <textarea name="message" class="message" cols="25" rows="7" placeholder="메시지를 입력하세요."></textarea>
+                            <input type="submit" class="submit_btn" value="제출" />
+                        </form>
+                        <a href="#" class="map_view">지도 보기 &#10148;</a>
+                    </div>
+                </section> <!-- section 5 끝 -->
+            </div> <!-- container 끝 -->
+
+            <footer> <!-- footer 시작 -->
+                <div id="footer_content_box">
+                    <ul id="footer_menu">
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">개인정보처리방침</a></li>
+                        <li><a href="#">청소년보호방침</a></li>
+                        <li><a href="#">인재채용</a></li>
+                    </ul>
+                    <div id="footer_content">
+                        <h2 id="footer_logo"><img src="images/logo.png" alt="logo" /></h2>
+                        <p>주소 : 경기 수원시 팔달구 매산로1가 111-21 &nbsp;|&nbsp; 전화번호 : 031-252-1234 &nbsp;|&nbsp; 팩스 : 031-252-4422</p>
+                        <small>Copyright 2023. beautydami Co. all rights reserved.</small>
+                    </div>
+                    <nav> <!-- SNS 시작-->
+                        <ul id="sns_footer">
+                            <li><a href="#"><img src="images/SNS_icon/facebook_o.png" /></a></li>
+                            <li><a href="#"><img src="images/SNS_icon/instargram_o.png" /></a></li>
+                            <li><a href="#"><img src="images/SNS_icon/twitter_o.png" /></a></li>
+                        </ul>
+                    </nav> <!-- SNS 끝-->
+                </div>
+            </footer> <!-- footer 끝 -->
+        </div> <!-- wrapper 끝 -->
+    </body>
+</html>
